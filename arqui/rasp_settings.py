@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Agregando aplicaciones independientes de Django
     'Login',
+    'example',
     'rest_framework',
     'rest_framework.authtoken',
 ]
@@ -104,12 +105,12 @@ WSGI_APPLICATION = 'arqui.wsgi.application'
 #     }
 # }
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #    }
-#}
+# }
 
 DATABASES = {
         'default': {
