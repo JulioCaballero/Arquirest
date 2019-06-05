@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -151,9 +152,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-host = '192.168.137.33'
+try:
+    HOST = socket.gethostbyname_ex(socket.gethostname())[2]
+    print(HOST)
+except:
+    pass
 
-if host in ALLOWED_HOSTS:
+hostRasp = '192.168.137.33'
+
+if hostRasp in HOST:
     try:
         from arqui.rasp_settings import *
     except ImportError:
