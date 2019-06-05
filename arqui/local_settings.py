@@ -151,12 +151,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-host = '192.168.137.1'
+host = '192.168.137.33'
 
-# print(host)
-
-if host not in ALLOWED_HOSTS:
+if host in ALLOWED_HOSTS:
     try:
         from arqui.rasp_settings import *
     except ImportError:
         pass
+
