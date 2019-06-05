@@ -25,7 +25,7 @@ SECRET_KEY = '-(!w4wx5fc34(gk703+u40_sctk-m406q^ibl)(f27t!snw45#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []  
+ALLOWED_HOSTS = ['192.168.137.79']
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     # Agregando aplicaciones independientes de Django
     'Login',
-    'example',
     'rest_framework',
     'rest_framework.authtoken',
 ]
@@ -105,10 +104,21 @@ WSGI_APPLICATION = 'arqui.wsgi.application'
 #     }
 # }
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'arquirest',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '192.168.137.1',
+        'PORT': '3306'
     }
 }
 
