@@ -150,3 +150,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+host = '192.168.137.1'
+
+# print(host)
+
+if host not in ALLOWED_HOSTS:
+    try:
+        from arqui.local_settings import *
+    except ImportError:
+        pass

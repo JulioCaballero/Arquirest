@@ -122,7 +122,6 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
@@ -174,8 +173,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-try:
-    from arqui.local_settings import *
-except ImportError:
-    pass
