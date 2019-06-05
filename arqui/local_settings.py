@@ -154,15 +154,13 @@ STATIC_URL = '/static/'
 
 try:
     HOST = socket.gethostbyname_ex(socket.gethostname())[2]
-    print(HOST)
+    
 except:
     pass
 
 hostRasp = '192.168.137.33'
 
+
 if hostRasp in HOST:
-    try:
-        from arqui.rasp_settings import *
-    except ImportError:
-        pass
+    print(HOST)
 
