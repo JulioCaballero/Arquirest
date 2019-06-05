@@ -1,4 +1,3 @@
-
 # Paqueterias a instalar
 # # pip install django-heroku
 # # dj-database-url
@@ -130,10 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-try:
-    from arqui.local_settings import *
-except ImportError:
-    pass
+
+
+
 
 try:
     from arqui.rasp_settings import *

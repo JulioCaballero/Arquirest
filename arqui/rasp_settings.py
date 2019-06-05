@@ -25,7 +25,7 @@ SECRET_KEY = '-(!w4wx5fc34(gk703+u40_sctk-m406q^ibl)(f27t!snw45#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.137.79']
+ALLOWED_HOSTS = ['192.168.137.33']
 
 
 # Application definition
@@ -123,6 +123,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+#         'NAME' : 'arquirest',
+#         'USER': 'postgres',
+#         'PASSWORD': 'xddi',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -161,3 +173,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+try:
+    from arqui.local_settings import *
+except ImportError:
+    pass
