@@ -157,6 +157,6 @@ host = '192.168.137.1'
 
 if host not in ALLOWED_HOSTS:
     try:
-        from arqui.local_settings import *
+        from arqui.rasp_settings import *
     except ImportError:
         pass
