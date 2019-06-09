@@ -16,6 +16,8 @@ idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.1
+mysql-connector==2.2.9
+mysqlclient==1.4.2
 oauthlib==3.0.1
 Pillow==6.0.0
 psycopg2==2.8.2
