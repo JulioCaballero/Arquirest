@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from sys import platform
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -153,7 +152,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-if platform == "linux" or platform == "linux2":
+hostRasp = '192.168.137.1'
+
+if hostRasp not in HOST:
     try:
         from arqui.rasp_settings import *
     except ImportError:
