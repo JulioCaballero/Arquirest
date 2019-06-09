@@ -1,3 +1,4 @@
+
 # Paqueterias a instalar
 # # pip install django-heroku
 # # dj-database-url
@@ -10,6 +11,7 @@ import os
 from decouple import config
 import dj_database_url
 # Importaciones necesarios de heroku fin
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,7 +135,6 @@ try:
     from arqui.local_settings import *
 except ImportError:
     pass
-
 
 if not DEBUG:
     SECRET_KEY = 'SECRET_KEY'

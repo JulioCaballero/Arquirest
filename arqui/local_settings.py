@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import socket
 from sys import platform
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -152,11 +151,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-print(platform)
+
 
 if platform == "linux" or platform == "linux2":
     try:
         from arqui.rasp_settings import *
     except ImportError:
         pass
-
