@@ -151,11 +151,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-hostRasp = '192.168.137.1'
-
-if hostRasp not in HOST:
-    try:
-        from arqui.rasp_settings import *
-    except ImportError:
-        pass
+try:
+    from arqui.rasp_settings import *
+except ImportError:
+    pass
